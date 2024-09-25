@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    max-height: 1vh;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+h3{
+    max-width: 20%;
+    font-size: larger;
+    margin: auto 4.5%; /* Add some margin for spacing */
+    /* margin-block-start: 1em;
+    margin-block-end: 1em; */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8,70px);
+    gap: 5px;
+    margin: 20px;
+    margin-top: 40px;
+}
+#output{
+    font-size: medium;
+    font-weight: 700;
+    max-width: 80%;
+    
+    border: solid 2px #010101;
+    padding: 3px;
+    margin: 2px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.grid-cell {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #010101;
+    background-color: #fff;
+    transition: background-color .1s, transform .3s, left 0.3s, top 0.3s;
+}
+.grid-cell:hover {
+    transform: scale(1.2);
+}
+.drone{
+    width: 120px;
+    height:120px;
+    background-size: cover;
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: black;
+    cursor: pointer;
+}
+.fix{
+    display: flex;
+}
+
+
+button {
+    margin-top: 10px;
+    /* margin-bottom: 2px; */
+    margin-right: 10px;
+}
+.button-item{
+    font-size: medium;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button-text{
+    margin: 5px;
+}
+.allbuttons{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.sub{
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: rgb(2, 18, 35);
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgba(98, 5, 5, 0.39);
+    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.sub:hover{
+    background: rgba(98, 5, 5, 1);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}

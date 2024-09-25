@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Movement Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Drone Movement Simulator</h1>
+    <div class="fix">
+     <h3>Assume that you only have 1 remote to control all 
+            the drones, my project calculates the minimum moves 
+            that would take to deliver drones to their respective 
+            locations given there are also no fly zones in the middle. 
+            You can set up the board for which you want to find the minimum 
+            moves. MAX Number of Drones could be only 4. Some Requirements - <ul>
+                <li>Drones can't fly over the destination of another drones</li>
+                <li>Drones can't fly over the Fly Zone</li>
+                <li>You can use arrows to try to get the drones to their respective locations in minimum moves</li>
+                <li>Click on Calculate moves and wait for 3 seconds to start the shortest path simulation</li>
+            </ul> </h3>
+    <div class="grid-container">
+        <!-- Grid will be dynamically generated here -->
+    </div>
+    <div class="allbuttons">
+    <div class="button-item">
+            <button class="drone" id="droneImg"></button>
+            <p class="button-text">Drone</p>
+        </div>
+    <div class="button-item">
+            <button class="drone" id="landingImg"></button>
+            <p class="button-text">Landing Space</p>
+        </div>
+    <div class="button-item">
+            <button class="drone" id="noflyImg"></button>
+            <p class="button-text">No Fly Zone</p>
+        </div>
+</div>
+</div>
+<div id="output"></div>
+<button class = "sub" onclick="calculateMoves()">Calculate Moves</button>
+
+<div id="moveCounter">Moves: 0</div>
+
+<button class = "sub" onclick="shuffleBoard()">Shuffle Board</button>
+  <button class = "sub" id="refreshButton">Refresh</button>
+  
+    <script src="script.js"></script>
+</body>
+</html>
